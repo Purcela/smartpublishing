@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Germania One';
+    src: url('GermaniaOne-Regular.eot');
+    src: url('GermaniaOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GermaniaOne-Regular.woff2') format('woff2'),
+        url('GermaniaOne-Regular.woff') format('woff'),
+        url('GermaniaOne-Regular.ttf') format('truetype'),
+        url('GermaniaOne-Regular.svg#GermaniaOne-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,192 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Henny Penny Regular";
+  src: url("../fonts/HennyPenny-Regular/HennyPenny-Regular.eot");
+  src: url("../fonts/HennyPenny-Regular/HennyPenny-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/HennyPenny-Regular/HennyPenny-Regular.woff2") format("woff2"), url("../fonts/HennyPenny-Regular/HennyPenny-Regular.woff") format("woff"), url("../fonts/HennyPenny-Regular/HennyPenny-Regular.ttf") format("truetype"), url("../fonts/HennyPenny-Regular/HennyPenny-Regular.svg#HennyPenny-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BPG Glaho Bold";
+  src: url("../fonts/bpg-glaho-bold/BPGGlaho-Bold.eot");
+  src: url("../fonts/bpg-glaho-bold/BPGGlaho-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/bpg-glaho-bold/BPGGlaho-Bold.woff2") format("woff2"), url("../fonts/bpg-glaho-bold/BPGGlaho-Bold.woff") format("woff"), url("../fonts/bpg-glaho-bold/BPGGlaho-Bold.ttf") format("truetype"), url("../fonts/bpg-glaho-bold/BPGGlaho-Bold.svg#BPGGlaho-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Germania One Regular";
+  src: url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.eot");
+  src: url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.woff2") format("woff2"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.woff") format("woff"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.ttf") format("truetype"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.svg#GermaniaOne-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px;
+}
+
+body .section-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
+  max-width: 1366px;
+  width: 100%;
+}
+
+body .header-wraper {
+  position: fixed;
+  background-color: rgba(128, 128, 128, 0.1411764706);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header-wraper .header-nav {
+  height: 100px;
+  margin: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+}
+body .header-wraper .header-nav .header-nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header-wraper .header-nav .header-nav-box .logo-title a {
+  font-family: "Henny Penny Regular";
+  font-size: 35px;
+  color: blue;
+}
+@media (max-width: 1100px) {
+  body .header-wraper .header-nav .header-nav-box .logo-title a {
+    display: none;
+  }
+}
+body .header-wraper .header-nav .header-nav-box .menu-ul1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+body .header-wraper .header-nav .header-nav-box .menu-ul1 .menu-li {
+  font-family: "BPG Glaho Bold";
+  font-size: 18px;
+  color: black;
+}
+body .header-wraper .header-nav .header-nav-box .menu-ul1 .active-li {
+  font-family: "BPG Glaho Bold";
+  font-size: 18px;
+  color: blue;
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .header-nav-box .menu-ul1 {
+    display: none;
+  }
+}
+body .header-wraper .header-nav .header-nav-box .burger-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .header-nav-box .burger-icon {
+    color: grey;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+body .header-wraper .header-nav .menu-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  display: none;
+  padding-bottom: 20px;
+}
+body .header-wraper .header-nav .menu-ul .menu-li {
+  font-family: "BPG Glaho Bold";
+  font-size: 25px;
+  color: black;
+}
+body .header-wraper .header-nav .menu-ul .active-li {
+  font-family: "BPG Glaho Bold";
+  font-size: 25px;
+  color: blue;
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .menu-ul.open-menu {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+body .section-1 {
+  margin-top: 150px;
+  height: 100%;
+}

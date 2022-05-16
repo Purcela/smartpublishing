@@ -1,0 +1,18 @@
+
+
+@mixin d-flex($display, $justyfy, $align-item,) {
+        display: $display;
+        justify-content: $justyfy;
+        align-items: $align-item;
+}
+@mixin border($width, $type, $color) {
+    border: $width $type $color;
+}
+
+@mixin transition-hover($property, $duration, $type, $delay) {
+    transition: $property, $duration, $type, $delay ;
+}
+
+
+
+

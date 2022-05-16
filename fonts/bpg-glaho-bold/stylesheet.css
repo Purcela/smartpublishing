@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BPG Glaho';
+    src: url('BPGGlaho-Bold.eot');
+    src: url('BPGGlaho-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BPGGlaho-Bold.woff2') format('woff2'),
+        url('BPGGlaho-Bold.woff') format('woff'),
+        url('BPGGlaho-Bold.ttf') format('truetype'),
+        url('BPGGlaho-Bold.svg#BPGGlaho-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
