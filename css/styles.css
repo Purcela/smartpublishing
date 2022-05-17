@@ -84,7 +84,7 @@ body {
   padding: 0 5px;
 }
 
-body .about-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
+body .contact-s-1, body .about-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
   max-width: 1366px;
   width: 100%;
 }
@@ -188,7 +188,7 @@ body .header-wraper .header-nav .menu-ul .active-li {
   }
 }
 body .index-s-1 {
-  margin-top: 150px;
+  margin-top: 100px;
   height: 100%;
 }
 body .index-s-1 .tableCell {
@@ -279,5 +279,129 @@ body .about-s-1 .about-box p {
 @media (max-width: 480px) {
   body .about-s-1 .about-box p {
     font-size: 18px;
+  }
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body .contact-s-1 {
+  margin-top: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  body .contact-s-1 {
+    flex-direction: column;
+  }
+}
+body .contact-s-1 .contact-box {
+  width: 260px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+body .contact-s-1 .contact-box h3 {
+  font-family: "BPG Glaho Bold";
+  font-size: 20px;
+}
+body .contact-s-1 .contact-box .contact-ul {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+body .contact-s-1 .contact-box .contact-ul .contact-li,
+body .contact-s-1 .contact-box .contact-ul .contact-li1,
+body .contact-s-1 .contact-box .contact-ul .contact-li2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "BPG Glaho Bold";
+}
+body .contact-s-1 .contact-box .contact-ul .contact-li i,
+body .contact-s-1 .contact-box .contact-ul .contact-li1 i,
+body .contact-s-1 .contact-box .contact-ul .contact-li2 i {
+  margin-right: 20px;
+  font-size: 30px;
+  color: blue;
+}
+body .contact-s-1 .contact-box .contact-ul .contact-li a,
+body .contact-s-1 .contact-box .contact-ul .contact-li1 a,
+body .contact-s-1 .contact-box .contact-ul .contact-li2 a {
+  line-height: 25px;
+  font-family: "BPG Algeti Compact";
+  font-size: 20px;
+  color: black;
+}
+body .contact-s-1 .contact-box .contact-ul .contact-li a:hover,
+body .contact-s-1 .contact-box .contact-ul .contact-li1 a:hover,
+body .contact-s-1 .contact-box .contact-ul .contact-li2 a:hover {
+  color: blue;
+  font-size: 22px;
+}
+body .contact-s-1 .qr-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  margin: 0 30px;
+  position: relative;
+}
+body .contact-s-1 .qr-box img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+body .contact-s-1 .qr-box .download-app {
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  margin-right: 15%;
+  margin-top: 50px;
+}
+@media (max-width: 680px) {
+  body .contact-s-1 .qr-box .download-app {
+    margin-right: 12%;
+  }
+}
+@media (max-width: 530px) {
+  body .contact-s-1 .qr-box .download-app {
+    margin-top: 80px;
+    margin-right: 8%;
+  }
+}
+body .contact-s-1 .qr-box .download-app h3 {
+  font-family: "BPG Glaho Bold";
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
+}
+body .contact-s-1 .qr-box .download-app .app-img {
+  width: 150px;
+  height: 50px;
+}
+@media (max-width: 580px) {
+  body .contact-s-1 .qr-box .download-app .app-img {
+    width: 100px;
+    height: 40px;
   }
 }
