@@ -69,9 +69,9 @@ a {
   font-display: swap;
 }
 @font-face {
-  font-family: "Germania One Regular";
-  src: url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.eot");
-  src: url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.woff2") format("woff2"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.woff") format("woff"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.ttf") format("truetype"), url("../fonts/GermaniaOne-Regular/GermaniaOne-Regular.svg#GermaniaOne-Regular") format("svg");
+  font-family: "BPG Algeti Compact";
+  src: url("../fonts/BPGAlgetiCompact/BPGAlgetiCompact.eot");
+  src: url("../fonts/BPGAlgetiCompact/BPGAlgetiCompact.eot?#iefix") format("embedded-opentype"), url("../fonts/BPGAlgetiCompact/BPGAlgetiCompact.woff2") format("woff2"), url("../fonts/BPGAlgetiCompact/BPGAlgetiCompact.woff") format("woff"), url("../fonts/BPGAlgetiCompact/BPGAlgetiCompact.ttf") format("truetype"), url("../fonts/BPGAlgetiCompact/BPGAlgetiCompact.svg#BPGAlgetiCompact") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -84,7 +84,7 @@ body {
   padding: 0 5px;
 }
 
-body .section-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
+body .about-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
   max-width: 1366px;
   width: 100%;
 }
@@ -154,6 +154,7 @@ body .header-wraper .header-nav .header-nav-box .burger-icon {
     color: grey;
     display: block;
     font-size: 30px;
+    margin-right: 30px;
     cursor: pointer;
   }
 }
@@ -186,7 +187,97 @@ body .header-wraper .header-nav .menu-ul .active-li {
     flex-direction: column;
   }
 }
-body .section-1 {
+body .index-s-1 {
   margin-top: 150px;
   height: 100%;
+}
+body .index-s-1 .tableCell {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .index-s-1 .tableCell .code-title {
+  font-family: "Henny Penny Regular";
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: gray;
+}
+body .index-s-1 .tableCell .random-generator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+body .index-s-1 .tableCell .random-generator input {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-family: "BPG Glaho Bold";
+  font-size: 25px;
+  border: 3px solid gray;
+  border-radius: 30px;
+}
+body .index-s-1 .tableCell .random-generator button {
+  border: none;
+  background-color: white;
+}
+body .index-s-1 .tableCell .generator-title {
+  margin-top: 10px;
+  margin-right: 50px;
+  font-family: "BPG Glaho Bold";
+  font-size: 20px;
+}
+
+body {
+  height: 100vh;
+}
+body .about-s-1 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 100px;
+  padding: 0 30px;
+  background-image: url(../img/info-book.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .about-s-1 .about-box {
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  padding: 20px 10px;
+  border-radius: 30px;
+  background-color: rgba(173, 216, 230, 0.6392156863);
+}
+body .about-s-1 .about-box h1 {
+  font-family: "BPG Glaho Bold";
+  color: black;
+  font-size: 40px;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+}
+@media (max-width: 480px) {
+  body .about-s-1 .about-box h1 {
+    font-size: 25px;
+  }
+}
+body .about-s-1 .about-box p {
+  font-family: "BPG Algeti Compact";
+  font-size: 20px;
+  word-spacing: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+@media (max-width: 480px) {
+  body .about-s-1 .about-box p {
+    font-size: 18px;
+  }
 }

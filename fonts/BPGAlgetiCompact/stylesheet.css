@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BPG Algeti Compact';
+    src: url('BPGAlgetiCompact.eot');
+    src: url('BPGAlgetiCompact.eot?#iefix') format('embedded-opentype'),
+        url('BPGAlgetiCompact.woff2') format('woff2'),
+        url('BPGAlgetiCompact.woff') format('woff'),
+        url('BPGAlgetiCompact.ttf') format('truetype'),
+        url('BPGAlgetiCompact.svg#BPGAlgetiCompact') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

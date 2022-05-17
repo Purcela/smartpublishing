@@ -1,0 +1,46 @@
+body {
+    @extend %body;
+    height: 100vh;
+    .about-s-1 {
+        @extend %width;
+        height: 100%;
+        @include d-flex (flex, center, flex-start);
+        margin-top: 100px;  
+        padding: 0 30px;         
+        background-image: url(../img/info-book.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .about-box {
+            max-width: 650px;
+            width: 100%;
+            @include d-flex (flex, center, center);
+            flex-direction: column;
+            margin-top: 200px;
+            padding: 20px 10px;
+            border-radius: 30px;
+            background-color: #add8e6a3;
+            h1 {
+                font-family: $bg-bold;
+                color: black;
+                font-size: 40px;
+                margin-bottom: 30px;                
+                letter-spacing: 5px;
+                @media (max-width: 480px) {
+                    font-size: 25px;
+                }
+            }
+            p {
+                font-family: $ac-compact;
+                font-size: 20px;
+                word-spacing: 5px;
+                text-align: center;
+                line-height: 30px;
+                @media (max-width: 480px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+}
