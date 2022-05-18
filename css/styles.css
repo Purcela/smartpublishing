@@ -500,32 +500,24 @@ body .contact-s-1 .contact-box .contact-ul {
   align-items: flex-start;
   flex-direction: column;
 }
-body .contact-s-1 .contact-box .contact-ul .contact-li,
-body .contact-s-1 .contact-box .contact-ul .contact-li1,
-body .contact-s-1 .contact-box .contact-ul .contact-li2 {
+body .contact-s-1 .contact-box .contact-ul .contact-li {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "BPG Glaho Bold";
 }
-body .contact-s-1 .contact-box .contact-ul .contact-li i,
-body .contact-s-1 .contact-box .contact-ul .contact-li1 i,
-body .contact-s-1 .contact-box .contact-ul .contact-li2 i {
+body .contact-s-1 .contact-box .contact-ul .contact-li i {
   margin-right: 20px;
   font-size: 30px;
   color: blue;
 }
-body .contact-s-1 .contact-box .contact-ul .contact-li a,
-body .contact-s-1 .contact-box .contact-ul .contact-li1 a,
-body .contact-s-1 .contact-box .contact-ul .contact-li2 a {
+body .contact-s-1 .contact-box .contact-ul .contact-li a {
   line-height: 25px;
   font-family: "BPG Algeti Compact";
   font-size: 20px;
   color: black;
 }
-body .contact-s-1 .contact-box .contact-ul .contact-li a:hover,
-body .contact-s-1 .contact-box .contact-ul .contact-li1 a:hover,
-body .contact-s-1 .contact-box .contact-ul .contact-li2 a:hover {
+body .contact-s-1 .contact-box .contact-ul .contact-li a:hover {
   color: blue;
   font-size: 22px;
 }

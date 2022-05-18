@@ -35,9 +35,7 @@ body {
                 height: 150px;
                 @include d-flex (flex, space-between, flex-start);
                 flex-direction: column;
-                .contact-li,
-                .contact-li1,
-                .contact-li2 {
+                .contact-li {
                     @include d-flex ( flex, center, center);
                     font-family: $bg-bold;
                     i {
