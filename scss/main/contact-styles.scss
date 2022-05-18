@@ -4,6 +4,7 @@
 
 body {
     @extend %body;
+    height: 100vh;
     .contact-s-1 {
         @extend %width;
         margin-top: 200px;

@@ -2,6 +2,7 @@
 
 body {
     @extend %body;
+    height: 100vh;
     .header-wraper{
         @extend %width;
         position: fixed; 

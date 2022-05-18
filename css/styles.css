@@ -89,6 +89,9 @@ body .contact-s-1, body .about-s-1, body .index-s-1, body .header-wraper .header
   width: 100%;
 }
 
+body {
+  height: 100vh;
+}
 body .header-wraper {
   position: fixed;
   background-color: rgba(128, 128, 128, 0.1411764706);
@@ -288,6 +291,9 @@ body .about-s-1 .about-box p {
   display: block;
 }
 
+body {
+  height: 100vh;
+}
 body .contact-s-1 {
   margin-top: 200px;
   height: 100%;
