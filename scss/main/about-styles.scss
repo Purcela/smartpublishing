@@ -1,9 +1,8 @@
 body {
     @extend %body;
-    height: 100vh;
     .about-s-1 {
         @extend %width;
-        height: 100%;
+        height: 1000px;
         @include d-flex (flex, center, flex-start);
         margin-top: 100px;  
         padding: 0 30px;         

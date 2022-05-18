@@ -2,7 +2,6 @@
 
 body {
     @extend %body;
-    height: 100vh;
     .header-wraper{
         @extend %width;
         position: fixed; 
@@ -87,7 +86,7 @@ body {
     .index-s-1 {
         @extend %width;
         margin-top: 100px;
-        height: 100%;
+        height: 1000px;
 
         .tableCell {
             margin-top: 100px;

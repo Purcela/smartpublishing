@@ -82,6 +82,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0 5px;
+  padding-bottom: 50px;
 }
 
 body .contact-s-1, body .about-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
@@ -89,9 +90,6 @@ body .contact-s-1, body .about-s-1, body .index-s-1, body .header-wraper .header
   width: 100%;
 }
 
-body {
-  height: 100vh;
-}
 body .header-wraper {
   position: fixed;
   background-color: rgba(128, 128, 128, 0.1411764706);
@@ -192,7 +190,7 @@ body .header-wraper .header-nav .menu-ul .active-li {
 }
 body .index-s-1 {
   margin-top: 100px;
-  height: 100%;
+  height: 1000px;
 }
 body .index-s-1 .tableCell {
   margin-top: 100px;
@@ -233,11 +231,8 @@ body .index-s-1 .tableCell .generator-title {
   font-size: 20px;
 }
 
-body {
-  height: 100vh;
-}
 body .about-s-1 {
-  height: 100%;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -291,12 +286,9 @@ body .about-s-1 .about-box p {
   display: block;
 }
 
-body {
-  height: 100vh;
-}
 body .contact-s-1 {
   margin-top: 200px;
-  height: 100%;
+  height: 1000px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -395,19 +387,39 @@ body .contact-s-1 .qr-box .download-app {
     margin-right: 8%;
   }
 }
+@media (max-width: 430px) {
+  body .contact-s-1 .qr-box .download-app {
+    margin-top: 50px;
+    margin-right: 1%;
+    height: 130px;
+  }
+}
 body .contact-s-1 .qr-box .download-app h3 {
   font-family: "BPG Glaho Bold";
   font-size: 18px;
   text-align: center;
   line-height: 25px;
 }
+@media (max-width: 430px) {
+  body .contact-s-1 .qr-box .download-app h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
 body .contact-s-1 .qr-box .download-app .app-img {
   width: 150px;
   height: 50px;
+  border-radius: 10%;
 }
 @media (max-width: 580px) {
   body .contact-s-1 .qr-box .download-app .app-img {
     width: 100px;
     height: 40px;
+  }
+}
+@media (max-width: 430px) {
+  body .contact-s-1 .qr-box .download-app .app-img {
+    width: 80px;
+    height: 30px;
   }
 }
