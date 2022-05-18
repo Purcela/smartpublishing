@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BPG Nuskha Modern';
+    src: url('BPGNuskhaModern.eot');
+    src: url('BPGNuskhaModern.eot?#iefix') format('embedded-opentype'),
+        url('BPGNuskhaModern.woff2') format('woff2'),
+        url('BPGNuskhaModern.woff') format('woff'),
+        url('BPGNuskhaModern.ttf') format('truetype'),
+        url('BPGNuskhaModern.svg#BPGNuskhaModern') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

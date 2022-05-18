@@ -1,0 +1,46 @@
+body {
+    @extend %body;
+    .galery-s-1 {
+        @extend %width;
+        @include d-flex (flex, center, center);
+        flex-wrap: wrap;
+        margin-top: 100px;
+        .galery-box {
+            @include d-flex (flex, space-around, center);
+            img {
+                width: 192px;
+                height: 282px;
+            }
+            .galery-books {
+                @include d-flex(flex, space-between, flex-start);
+                flex-direction: column;
+                width: 200px;
+                height: 282px;
+            }
+            .galery-book-info {
+                width: 100%;
+                font-family: $ac-compact;
+                font-size: 18px;
+                line-height: 22px;
+            }
+            .galery-pay-box {
+                @include d-flex (flex, center, center);
+                flex-direction: column;
+                .galery-price {
+                    font-family: $nm-modern;
+                    font-size: 22px;
+                    color: #3DD6C4;
+                    text-align: center;
+                }
+                .galery-pay {
+                    @include d-flex (flex, center, center);
+                    width: 120px;
+                    height: 30px;
+                    border: 2px solid gray;
+                    border-radius: 30px;
+                    background-color: #eec418fc;
+                }
+            }
+        }
+    }
+}
