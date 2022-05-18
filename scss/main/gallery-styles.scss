@@ -5,32 +5,57 @@ body {
         @include d-flex (flex, center, center);
         flex-wrap: wrap;
         margin-top: 100px;
+        @media (max-width: 850px) {
+            flex-direction: column;
+        }        
+        @media (max-width: 768px) {
+            margin-top: 250px;
+        }
         .galery-box {
-            @include d-flex (flex, space-around, center);
+            @include d-flex (flex, center, center);
+            width: 50%;
+            margin-top: 100px;
+            @media (max-width: 850px) {
+                width: 400px;
+            }
+            @media (max-width: 768px) {
+                margin-top: 50px;
+            }
+            @media (max-width: 480px) {
+                width: 100%;
+                flex-direction: column;
+            }
             img {
                 width: 192px;
                 height: 282px;
+                margin-right: 10px
             }
             .galery-books {
-                @include d-flex(flex, space-between, flex-start);
+                @include d-flex(flex, space-evenly, flex-start);
                 flex-direction: column;
-                width: 200px;
-                height: 282px;
+                width: 192px;
+                min-height: 200px;
+                height: 100%;
             }
             .galery-book-info {
                 width: 100%;
                 font-family: $ac-compact;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 22px;
             }
-            .galery-pay-box {
+            .galery-price-box {
                 @include d-flex (flex, center, center);
                 flex-direction: column;
+                margin-top: 20px;
+                @media (max-width: 480px) {
+                    width: 100%;
+                }
                 .galery-price {
                     font-family: $nm-modern;
                     font-size: 22px;
                     color: #3DD6C4;
                     text-align: center;
+                    margin-bottom: 10px
                 }
                 .galery-pay {
                     @include d-flex (flex, center, center);

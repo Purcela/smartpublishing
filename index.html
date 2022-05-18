@@ -52,20 +52,48 @@
         </nav>
     </header>
     <section class="index-s-1">
+        <div class="tableCell">
+            <div class="code-title"> შეიყვანეთ ვიდეოს QR კოდი </div>
+            <form class="random-generator">
+                <input type="text" name="video" placeholder="">
+                <button>
+                <img src="img/kk.png" onclick="getVideoFr();" style="cursor:pointer;">
+                </button>
+            </form>
+            <p class="generator-title"> მაგ: V11 </p>
+        </div>
+        <a href="galery.html">
+            <div class="slideshow-container">
 
-     
-      <div class="tableCell">
-        <div class="code-title"> შეიყვანეთ ვიდეოს QR კოდი </div>
-        <form class="random-generator">
-            <input type="text" name="video" placeholder="">
-            <button>
-              <img src="img/kk.png" onclick="getVideoFr();" style="cursor:pointer;">
-            </button>
-        </form>
-        <p class="generator-title"> მაგ: V11 </p>
-      </div>
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/book245.png" style="width:100%">
+                <div class="text"> </div>
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/book245-1.png" style="width:100%">
+                <div class="text"> </div>
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/book245.png" style="width:100%">
+                <div class="text"> </div>
+                </div>
+            </a>
+            </div>
+
+        <br>        
+        <div class="dot-box" style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script> let slideIndex = 0; showSlides();</script>
 </body>
 </html>
