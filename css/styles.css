@@ -193,7 +193,8 @@ body .index-s-1 {
   height: 1000px;
 }
 body .index-s-1 .tableCell {
-  margin-top: 100px;
+  margin-top: 50px;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,11 +206,17 @@ body .index-s-1 .tableCell .code-title {
   margin-bottom: 10px;
   color: gray;
 }
+@media (max-width: 480px) {
+  body .index-s-1 .tableCell .code-title {
+    font-size: 20px;
+  }
+}
 body .index-s-1 .tableCell .random-generator {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
 }
 body .index-s-1 .tableCell .random-generator input {
   width: 100%;

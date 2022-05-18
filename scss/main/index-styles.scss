@@ -87,9 +87,9 @@ body {
         @extend %width;
         margin-top: 100px;
         height: 1000px;
-
         .tableCell {
-            margin-top: 100px;
+            margin-top: 50px;
+            padding: 0 20px;
             @include d-flex (flex, center, center);
             flex-direction: column;
             .code-title {
@@ -97,10 +97,14 @@ body {
                 font-size: 25px;
                 margin-bottom: 10px;
                 color: gray;
+                @media (max-width: 480px) {
+                    font-size: 20px;
+                }
             }            
             .random-generator {
                 @include d-flex (flex, space-between, center);
-                width: 350px;
+                max-width: 350px;
+                width: 100%;
                 input {
                     width: 100%;
                     height: 50px;                    
