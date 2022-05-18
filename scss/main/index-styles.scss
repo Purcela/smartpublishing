@@ -5,7 +5,7 @@ body {
     .header-wraper{
         @extend %width;
         position: fixed; 
-        background-color: #80808024;
+        background-color: #8080803d;
         @include d-flex (flex, space-between, center);
         .header-nav {
             @extend %width;            
