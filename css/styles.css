@@ -208,7 +208,7 @@ body .index-s-1 .tableCell .code-title {
 }
 @media (max-width: 480px) {
   body .index-s-1 .tableCell .code-title {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 body .index-s-1 .tableCell .random-generator {
