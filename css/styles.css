@@ -198,11 +198,9 @@ body .header-wraper .header-nav .menu-ul .active-li {
 }
 body .index-s-1 {
   margin-top: 100px;
-  height: 1000px;
 }
 body .index-s-1 .tableCell {
   margin-top: 100px;
-  margin-bottom: 100px;
   padding: 0 20px;
   display: flex;
   justify-content: center;
@@ -250,6 +248,18 @@ body .index-s-1 .tableCell .generator-title {
   margin-right: 50px;
   font-family: "BPG Glaho Bold";
   font-size: 20px;
+}
+body .index-s-1 .video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+body .index-s-1 .video-box video {
+  max-width: 600px;
+  width: 100%;
+  max-height: 340px;
+  height: auto;
 }
 body .index-s-1 a .slideshow-container {
   max-width: 1000px;

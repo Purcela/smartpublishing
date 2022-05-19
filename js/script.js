@@ -1,15 +1,7 @@
 $("#burger-menu").on("click", function(){
     $("#menu").toggleClass("open-menu");
   })
-  
-function getVideoFr() {
-    
-  var a = document.getElementById("fd_s").value;
-  $.get('config/getVideoJs.php', {a:a}, function(data) {
-    $('#random_code_subitlte').html(data);
-  });
-}
-
+ 
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -25,4 +17,10 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+ 
+function myFunction() {
+  var x = document.getElementById("myVideo").autoplay;
+  document.getElementById("demo").innerHTML = x;
 }
