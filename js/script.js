@@ -24,3 +24,11 @@ function myFunction() {
   var x = document.getElementById("myVideo").autoplay;
   document.getElementById("demo").innerHTML = x;
 }
+
+function getVideoFr() {
+	
+  var a = document.getElementById("fd_s").value;
+  $.get('config/getVideoJs.php', {a:a}, function(data) {
+    $('#random_code_subitlte').html(data);
+  });
+}

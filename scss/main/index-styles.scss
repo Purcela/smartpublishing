@@ -193,6 +193,28 @@ body {
                 display: inline-block;
                 transition: background-color 0.6s ease;
             }
-        }        
+        } 
+        .mobile-link {
+            display: none;
+          
+          
+          @media screen and (max-device-width: 767px) and (orientation: portrait) {
+             .desktop-link {
+                 display: none;
+             }
+             .mobile-link {
+                 display: block;
+             }
+          }
+          
+          @media screen and (max-device-width: 1024px) and (orientation: landscape) {
+             .desktop-link {
+                 display: none;
+             }
+             .mobile-link {
+                 display: block;
+             }
+          } 
+        }      
     }
 }
