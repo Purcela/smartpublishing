@@ -7,7 +7,7 @@ body {
     .contact-s-1 {
         @extend %width;
         margin-top: 200px;
-        height: 1000px;
+        height: 100%;
         @include d-flex( flex, space-evenly, center);
         @media (max-width: 1160px) {
             flex-direction: column;
@@ -63,6 +63,9 @@ body {
             height: 610px;
             margin: 0 30px;
             position: relative;
+            @media (max-width: 1160px) {
+                margin-top: 50px;;
+            }
             img {
                 width: 100%;
                 height: auto;

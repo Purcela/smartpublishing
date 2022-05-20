@@ -261,25 +261,25 @@ body .index-s-1 .video-box video {
   max-height: 340px;
   height: auto;
 }
-body .index-s-1 a .slideshow-container {
+body .index-s-1 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
-body .index-s-1 a .slideshow-container .mySlides {
+body .index-s-1 .slideshow-container .mySlides {
   display: none;
 }
-body .index-s-1 a .slideshow-container .mySlides .numbertext {
+body .index-s-1 .slideshow-container .mySlides .numbertext {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
-body .index-s-1 a .slideshow-container .mySlides img {
+body .index-s-1 .slideshow-container .mySlides a img {
   vertical-align: middle;
 }
-body .index-s-1 a .slideshow-container .mySlides .text {
+body .index-s-1 .slideshow-container .mySlides .text {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -289,11 +289,11 @@ body .index-s-1 a .slideshow-container .mySlides .text {
   text-align: center;
 }
 @media only screen and (max-width: 300px) {
-  body .index-s-1 a .slideshow-container .mySlides .text .text {
+  body .index-s-1 .slideshow-container .mySlides .text .text {
     font-size: 11px;
   }
 }
-body .index-s-1 a .slideshow-container .fade {
+body .index-s-1 .slideshow-container .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -305,7 +305,7 @@ body .index-s-1 a .slideshow-container .fade {
     opacity: 1;
   }
 }
-body .index-s-1 a .slideshow-container .fade .active {
+body .index-s-1 .slideshow-container .fade .active {
   background-color: #717171;
 }
 body .index-s-1 .dot-box .dot {
@@ -465,7 +465,7 @@ body .about-s-1 .about-box p {
 
 body .contact-s-1 {
   margin-top: 200px;
-  height: 1000px;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -540,6 +540,11 @@ body .contact-s-1 .qr-box {
   height: 610px;
   margin: 0 30px;
   position: relative;
+}
+@media (max-width: 1160px) {
+  body .contact-s-1 .qr-box {
+    margin-top: 50px;
+  }
 }
 body .contact-s-1 .qr-box img {
   width: 100%;

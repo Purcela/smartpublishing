@@ -137,51 +137,51 @@ body {
                 max-height: 340px;
                 height: auto;
             }
-        }
-        a {       
-            .slideshow-container {
-                max-width: 1000px;
-                position: relative;
-                margin: auto;
-                .mySlides {
-                    display: none;
-                    .numbertext {
-                        color: #f2f2f2;
-                        font-size: 12px;
-                        padding: 8px 12px;
-                        position: absolute;
-                        top: 0;
-                    }
+        }             
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            .mySlides {
+                display: none;
+                .numbertext {
+                    color: #f2f2f2;
+                    font-size: 12px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    top: 0;
+                }
+                a {
                     img {
                         vertical-align: middle;
                     }
-                    .text {
-                        color: #f2f2f2;
-                        font-size: 15px;
-                        padding: 8px 12px;
-                        position: absolute;
-                        bottom: 8px;
-                        width: 100%;
-                        text-align: center;
-                        @media only screen and (max-width: 300px) {
-                            .text {
-                                font-size: 11px
-                            }
+                }
+                .text {
+                    color: #f2f2f2;
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                    @media only screen and (max-width: 300px) {
+                        .text {
+                            font-size: 11px
                         }
                     }
-                }            
-                .fade {
-                    animation-name: fade;
-                    animation-duration: 1.5s;
-                    @keyframes fade {
-                        from {opacity: 0.4};
-                        to {opacity: 1};
-                    }
-                    .active {
-                        background-color: #717171;
-                    }
-                }            
-            }
+                }
+            }            
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+                @keyframes fade {
+                    from {opacity: 0.4};
+                    to {opacity: 1};
+                }
+                .active {
+                    background-color: #717171;
+                }
+            }            
         }
         .dot-box {
             .dot {
@@ -193,28 +193,6 @@ body {
                 display: inline-block;
                 transition: background-color 0.6s ease;
             }
-        } 
-        .mobile-link {
-            display: none;
-          
-          
-          @media screen and (max-device-width: 767px) and (orientation: portrait) {
-             .desktop-link {
-                 display: none;
-             }
-             .mobile-link {
-                 display: block;
-             }
-          }
-          
-          @media screen and (max-device-width: 1024px) and (orientation: landscape) {
-             .desktop-link {
-                 display: none;
-             }
-             .mobile-link {
-                 display: block;
-             }
-          } 
         }      
     }
 }
