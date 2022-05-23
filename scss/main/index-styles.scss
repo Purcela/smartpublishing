@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     @extend %body;
     .header-wraper{
@@ -135,62 +141,228 @@ body {
                 max-height: 340px;
                 height: auto;
             }
-        }             
-        .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-            .mySlides {
-                display: none;
-                .numbertext {
-                    color: #f2f2f2;
-                    font-size: 12px;
-                    padding: 8px 12px;
-                    position: absolute;
-                    top: 0;
-                }
-                a {
-                    img {
-                        vertical-align: middle;
-                    }
-                }
-                .text {
-                    color: #f2f2f2;
-                    font-size: 15px;
-                    padding: 8px 12px;
-                    position: absolute;
-                    bottom: 8px;
-                    width: 100%;
-                    text-align: center;
-                    @media only screen and (max-width: 300px) {
-                        .text {
-                            font-size: 11px
-                        }
-                    }
-                }
-            }            
-            .fade {
-                animation-name: fade;
-                animation-duration: 1.5s;
-                @keyframes fade {
-                    from {opacity: 0.4};
-                    to {opacity: 1};
-                }
-                .active {
-                    background-color: #717171;
-                }
-            }            
         }
-        .dot-box {
-            .dot {
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-            }
-        }      
+    }
+        
+}  
+
+// ------------------------------ slideshow -----------------------------
+
+#slideshow {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1100px;
+    width: 100%;
+    height: 525px;
+}
+
+#slides {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+#gallery {
+    position: relative;
+    width: 10%;
+    overflow: hidden;
+}
+
+#slides img,
+#gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+
+.slide.show {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.thumbnail {
+    height: 25%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 40px;
+    color: #000;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    z-index: 1000;
+}
+
+.slide-btn:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.slide .content {
+    position: absolute;
+    left: 0;
+    bottom: -999px;
+    color: #fff;
+    padding: 25px;
+    line-height: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: bottom 0.4s ease;
+}
+
+.slide .title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.slide:hover>.content {
+    bottom: 0;
+}
+
+.thumbnail .title {
+    position: absolute;
+    top: 0;
+    left: -999px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+    height: 50px;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.thumbnail .description {
+    position: absolute;
+    left: 0;
+    bottom: -999px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.thumbnail:hover .title {
+    left: 0;
+}
+
+.thumbnail:hover .description {
+    bottom: -12px;
+}
+
+@media screen and (max-width: 1000px) {
+    #slides {
+        width: 90%;
+    }
+    #slides img {
+        height: auto;        
+    }
+    // #gallery {
+    //     display: none;
+    // }
+    .thumbnail {
+        width: 15px;
+        height: 15px;
+        margin-top: 10px;
+        margin-left: 5px;
+        border-radius: 50%;
+        background-color: rgb(0 27 255 / 68%);
+    }
+    #gallery img {
+        display: none;
+    }
+    .content {
+        display: none;
     }
 }
+
+        // .slideshow-container {
+        //     max-width: 1000px;
+        //     height: 650px;
+        //     position: relative;
+        //     margin: auto;
+        //     .mySlides {
+        //         display: none;
+        //         .numbertext {
+        //             color: #f2f2f2;
+        //             font-size: 12px;
+        //             padding: 8px 12px;
+        //             position: absolute;
+        //             top: 0;
+        //         }
+        //         a {
+        //             img {
+        //                 vertical-align: middle;
+        //                 width: 100%;
+        //                 height: 650px;
+        //             }
+        //         }
+        //         .text {
+        //             color: #f2f2f2;
+        //             font-size: 15px;
+        //             padding: 8px 12px;
+        //             position: absolute;
+        //             bottom: 8px;
+        //             width: 100%;
+        //             text-align: center;
+        //             @media only screen and (max-width: 300px) {
+        //                 .text {
+        //                     font-size: 11px
+        //                 }
+        //             }
+        //         }
+        //     }            
+        //     .fade {
+        //         animation-name: fade;
+        //         animation-duration: 1.5s;
+        //         @keyframes fade {
+        //             from {opacity: 0.4};
+        //             to {opacity: 1};
+        //         }
+        //         .active {
+        //             background-color: #717171;
+        //         }
+        //     }            
+        // }
+        // .dot-box {
+            
+        //     text-align:center;
+        //     .dot {
+        //         height: 15px;
+        //         width: 15px;
+        //         margin: 0 2px;
+        //         background-color: #bbb;
+        //         border-radius: 50%;
+        //         display: inline-block;
+        //         transition: background-color 0.6s ease;
+        //     }
+        // }      
+// ------------------------------------------------------------------------
