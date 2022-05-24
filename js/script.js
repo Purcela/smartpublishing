@@ -1,8 +1,13 @@
 $("#burger-menu").on("click", function(){
     $("#menu").toggleClass("open-menu");
   })
- 
-// --------------------------  slideshow -------------------------------------
+
+//   ----------------------------------------------- facebook -----------------------------------------------------------
+  
+  
+
+        
+// ------------------------------------------------  slideshow -----------------------------------------------------------
 
 let slides = document.querySelectorAll('.slide');
 let thumbnails = document.querySelectorAll('.thumbnail');
