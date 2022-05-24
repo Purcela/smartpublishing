@@ -99,6 +99,7 @@ body .contact-s-1, body .about-s-1, body .galery-s-1, body .index-s-1, body .hea
 }
 
 body {
+  background-image: url(../img/header-back.png);
   /* Slideshow container */
   /* The dots/bullets/indicators */
   /* Fading animation */
@@ -345,7 +346,7 @@ body .footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: url(../img/header-back.png);
+  background-image: url(../img/header-back2.png);
 }
 body .footer .footer-social {
   width: 30%;
