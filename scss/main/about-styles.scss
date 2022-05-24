@@ -2,9 +2,9 @@ body {
     @extend %body;
     .about-s-1 {
         @extend %width;
-        height: 1000px;
+        height: 950px;
         @include d-flex (flex, center, flex-start);
-        margin-top: 100px;  
+        margin-top: 95px;  
         padding: 0 30px;         
         background-image: url(../img/info-book.jpg);
         background-position: center;
@@ -15,7 +15,7 @@ body {
             width: 100%;
             @include d-flex (flex, center, center);
             flex-direction: column;
-            margin-top: 200px;
+            margin-top: 130px;
             padding: 20px 10px;
             border-radius: 30px;
             background-color: #add8e6a3;

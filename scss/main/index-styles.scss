@@ -1,15 +1,10 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 body {
     @extend %body;
     .header-wraper{
         @extend %width;
-        position: fixed; 
-        background-color: #8080803d;
+        position: fixed;
+        background-image: url(../img/header-back.png);
         @include d-flex (flex, space-between, center);
         .header-nav {
             @extend %width;            
@@ -65,22 +60,22 @@ body {
                 flex-direction: column;
                 width: 100%;
                 display: none;                
-                padding-bottom: 20px;
+                padding-bottom: 10px;
                 .menu-li {
                     font-family: $bg-bold;
-                    font-size: 25px;
+                    font-size: 15px;
                     color: black;
                 }
                 .active-li {    
                     font-family: $bg-bold;
-                    font-size: 25px;
+                    font-size: 15px;
                     color: blue;
                 }
             }
             @media (max-width:768px) {
                 .menu-ul.open-menu {
                 width: 100%;
-                height: 170px;
+                height: 110px;
                 @include d-flex(flex, space-between, center);
                 flex-direction: column;                    
                 }
@@ -89,9 +84,10 @@ body {
     }
     .index-s-1 {
         @extend %width;
-        margin-top: 100px;
+        margin-top: 40px;
         .tableCell {
             margin-top: 100px;
+            margin-bottom: 50px;
             padding: 0 20px;
             @include d-flex (flex, center, center);
             flex-direction: column;
@@ -133,8 +129,7 @@ body {
             }
         }
         .video-box {
-            @include d-flex (flex, center, center);            
-            margin: 50px 0;
+            @include d-flex (flex, center, center);
             video {
                 max-width: 600px;
                 width: 100%;
@@ -143,229 +138,100 @@ body {
             }
         }
     }
-        
-}  
+// ------------------------------ slideshow -----------------------------
+    .index-s-2 {
+        @include d-flex (flex, center, center);
+        flex-direction: column;
+        margin: 30px 0;
+    }
+    .mySlides {display: none;}
+    img {
+        vertical-align: middle;
+        width: 100%;
+        max-height: 640px;
+        height: auto;
+    }
+    .slideshow-title {
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #c0c0c0c4;
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
+    }
+    /* Slideshow container */
+    .slideshow-container {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor:pointer;
+    }
+    .active {
+    background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+    .footer {
+        max-width: 1366px;
+        width: 100%;
+        height: 50px;
+        @include d-flex (flex, space-around, center);
+        background-image: url(../img/header-back.png);
+        .footer-social {
+            width: 30%;
+            height: 100%;
+            @include d-flex (flex, space-evenly, center);
+            .fa-facebook-f,
+            .fa-phone-volume,
+            .fa-google-plus-g {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                @include d-flex (flex, center, center);
+                font-size: 15px;
+                background-color: #3B5998;
+                color: #FFFFFF;
+            }
+            .fa-phone-volume {
+                // background-color: #55ACEE;
+                color: #FFFFFF;
+            }
+            .fa-google-plus-g {
+                background-color: #DC4E41;
+                color: #FFFFFF;
+            }
+        }
+
+    }
+} 
 // ------------------------------- facebook -----------------------------
 
-
-
-// ------------------------------ slideshow -----------------------------
-
-#slideshow {
-    display: flex;
-    margin: 50px auto;
-    max-width: 1100px;
-    width: 100%;
-    height: 525px;
-}
-
-#slides {
-    position: relative;
-    width: 80%;
-    overflow: hidden;
-}
-
-#gallery {
-    position: relative;
-    width: 10%;
-    overflow: hidden;
-}
-
-#slides img,
-#gallery img {
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.4s linear;
-}
-
-.slide.show {
-    opacity: 1;
-    z-index: 1000;
-}
-
-.thumbnail {
-    height: 25%;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.slide-btn {
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
-    font-size: 40px;
-    color: #000;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.4s linear;
-    z-index: 1000;
-}
-
-.slide-btn:hover {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.next {
-    right: 0;
-}
-
-.prev {
-    left: 0;
-}
-
-.slide .content {
-    position: absolute;
-    left: 0;
-    bottom: -999px;
-    color: #fff;
-    padding: 25px;
-    line-height: 25px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: bottom 0.4s ease;
-}
-
-.slide .title {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.slide:hover>.content {
-    bottom: 0;
-}
-
-.thumbnail .title {
-    position: absolute;
-    top: 0;
-    left: -999px;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    color: #fff;
-    height: 50px;
-    padding: 0 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 0.4s ease;
-}
-
-.thumbnail .description {
-    position: absolute;
-    left: 0;
-    bottom: -999px;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    color: #fff;
-    padding: 15px 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 0.4s ease;
-}
-
-.thumbnail:hover .title {
-    left: 0;
-}
-
-.thumbnail:hover .description {
-    bottom: -12px;
-}
-
-@media screen and (max-width: 1000px) {
-    #slides {
-        width: 90%;
-    }
-    #slides img {
-        height: auto;        
-    }
-    // #gallery {
-    //     display: none;
-    // }
-    .thumbnail {
-        width: 15px;
-        height: 15px;
-        margin-top: 10px;
-        margin-left: 5px;
-        border-radius: 50%;
-        background-color: rgb(0 27 255 / 68%);
-    }
-    #gallery img {
-        display: none;
-    }
-    .content {
-        display: none;
-    }
-}
-
-        // .slideshow-container {
-        //     max-width: 1000px;
-        //     height: 650px;
-        //     position: relative;
-        //     margin: auto;
-        //     .mySlides {
-        //         display: none;
-        //         .numbertext {
-        //             color: #f2f2f2;
-        //             font-size: 12px;
-        //             padding: 8px 12px;
-        //             position: absolute;
-        //             top: 0;
-        //         }
-        //         a {
-        //             img {
-        //                 vertical-align: middle;
-        //                 width: 100%;
-        //                 height: 650px;
-        //             }
-        //         }
-        //         .text {
-        //             color: #f2f2f2;
-        //             font-size: 15px;
-        //             padding: 8px 12px;
-        //             position: absolute;
-        //             bottom: 8px;
-        //             width: 100%;
-        //             text-align: center;
-        //             @media only screen and (max-width: 300px) {
-        //                 .text {
-        //                     font-size: 11px
-        //                 }
-        //             }
-        //         }
-        //     }            
-        //     .fade {
-        //         animation-name: fade;
-        //         animation-duration: 1.5s;
-        //         @keyframes fade {
-        //             from {opacity: 0.4};
-        //             to {opacity: 1};
-        //         }
-        //         .active {
-        //             background-color: #717171;
-        //         }
-        //     }            
-        // }
-        // .dot-box {
-            
-        //     text-align:center;
-        //     .dot {
-        //         height: 15px;
-        //         width: 15px;
-        //         margin: 0 2px;
-        //         background-color: #bbb;
-        //         border-radius: 50%;
-        //         display: inline-block;
-        //         transition: background-color 0.6s ease;
-        //     }
-        // }      
-// ------------------------------------------------------------------------

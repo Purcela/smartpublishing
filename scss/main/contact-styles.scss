@@ -6,7 +6,7 @@ body {
     @extend %body;
     .contact-s-1 {
         @extend %width;
-        margin-top: 200px;
+        margin-top: 95px;
         height: 100%;
         @include d-flex( flex, space-evenly, center);
         @media (max-width: 1160px) {
