@@ -147,36 +147,7 @@ body {
 }  
 // ------------------------------- facebook -----------------------------
 
-.mobile-link {
-    display: none;
- }
- 
- @media screen and (max-device-width: 767px) and (orientation: portrait) {
-     .desktop-link {
-         display: none;
-     }
-     .mobile-link {
-         display: block;
-     }
- }
- 
- @media screen and (max-device-width: 1024px) and (orientation: landscape) {
-     .desktop-link {
-         display: none;
-     }
-     .mobile-link {
-         display: block;
-     }
- }
 
-//  <a class='mobile-link' onclick='
-// setTimeout(function () { window.location = 'www.facebook.com/profileid'; }, 2500);
-// window.location = 'fb://facewebmodal/=pagename';'>
-//     <img src='some.url' />
-//  </a>
-//  <a class='desktop-link' href='www.facebook.com/profileid'>
-//     <img src='some.url' />
-//  </a>
 
 // ------------------------------ slideshow -----------------------------
 

@@ -268,28 +268,6 @@ body .index-s-1 .video-box video {
   height: auto;
 }
 
-.mobile-link {
-  display: none;
-}
-
-@media screen and (max-device-width: 767px) and (orientation: portrait) {
-  .desktop-link {
-    display: none;
-  }
-
-  .mobile-link {
-    display: block;
-  }
-}
-@media screen and (max-device-width: 1024px) and (orientation: landscape) {
-  .desktop-link {
-    display: none;
-  }
-
-  .mobile-link {
-    display: block;
-  }
-}
 #slideshow {
   display: flex;
   margin: 50px auto;
