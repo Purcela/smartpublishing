@@ -251,7 +251,7 @@ body .index-s-1 .tableCell .random-generator button {
 }
 body .index-s-1 .tableCell .random-generator button .fa-hand-pointer {
   font-size: 40px;
-  color: rgba(85, 82, 40, 0.8588235294);
+  color: orange;
   cursor: pointer;
 }
 body .index-s-1 .tableCell .generator-title {
