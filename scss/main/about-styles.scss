@@ -2,7 +2,9 @@ body {
     @extend %body;
     .about-s-1 {
         @extend %width;
-        height: 950px;
+        min-height: 850px;
+        height: 100%;
+        margin-top: 100px;
         @include d-flex (flex, center, center);
         padding: 0 30px;         
         background-image: url(../img/info-book.jpg);
@@ -13,21 +15,10 @@ body {
             max-width: 650px;
             width: 100%;
             @include d-flex (flex, center, center);
-            margin-top: 130px;
             padding: 20px 10px;
             border-radius: 30px;
             background-color: #add8e6a3;
-            h1 {
-                font-family: $bg-bold;
-                color: black;
-                font-size: 40px;
-                margin-bottom: 30px;                
-                letter-spacing: 5px;
-                @media (max-width: 480px) {
-                    font-size: 25px;
-                }
-            }
-            p {
+            h3 {
                 font-family: $ac-compact;
                 font-size: 20px;
                 word-spacing: 5px;

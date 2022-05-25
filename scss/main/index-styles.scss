@@ -1,7 +1,6 @@
 
 body {
-    @extend %body;
-    
+    @extend %body;    
     background-image: url(../img/header-back.png);
     .header-wraper{
         @extend %width;
@@ -86,15 +85,18 @@ body {
     }
     .index-s-1 {
         @extend %width;
+        @include d-flex (flex, space-between, center);
+        flex-direction: column;
         margin-top: 100px;
+        min-height: 250px;
+        height: 100%;
         .tableCell {
-            margin-top: 100px;
-            margin-bottom: 50px;
+            margin: 50px 0;
             padding: 0 20px;
             @include d-flex (flex, center, center);
             flex-direction: column;
             @media (max-width: 768px) {
-                margin-top: 200px;
+                margin-top: 130px;
             }
             .code-title {
                 font-family: $hp-reg;
@@ -109,17 +111,25 @@ body {
                 @include d-flex (flex, space-between, center);
                 max-width: 350px;
                 width: 100%;
+                width: 100%;
+                height: 50px; 
+                font-family: $bg-bold;
+                font-size: 25px;
+                border: 3px solid gray;
+                border-radius: 30px;                    
                 input {
                     width: 100%;
-                    height: 50px;                    
-                    padding: 0 20px;
-                    font-family: $bg-bold;
+                    height: 100%;
+                    border: none;
                     font-size: 25px;
-                    border: 3px solid gray;
-                    border-radius: 30px;
+                    font-family: $nm-modern;
+                    border-radius: 30px;    
+                    background-image: url(../img/header-back.png);
+                    // box-sizing: initial;
                 }
                 button {
                     border: none;
+                    border-radius: 30px;      
                     .fa-hand-pointer {
                         font-size: 40px;
                         color: orange;
@@ -133,22 +143,20 @@ body {
                 font-family: $bg-bold;
                 font-size: 20px;
             }
+        }        
+        video {
+            max-width: 600px;
+            width: 100%;
+            max-height: 340px;
+            height: auto;
         }
-        .video-box {
-            @include d-flex (flex, center, center);
-            video {
-                max-width: 600px;
-                width: 100%;
-                max-height: 340px;
-                height: auto;
-            }
-        }
+        
     }
 // ------------------------------ slideshow -----------------------------
     .index-s-2 {
         @include d-flex (flex, center, center);
         flex-direction: column;
-        margin: 30px 0;
+        margin: 50px 0;
     }
     .mySlides {display: none;}
     img {
@@ -189,7 +197,7 @@ body {
     cursor:pointer;
     }
     .active {
-    background-color: #717171;
+    background-color: #1877f2;
     }
     /* Fading animation */
     .fade {
@@ -206,6 +214,7 @@ body {
     from {opacity: .4} 
     to {opacity: 1}
     }
+// ------------------------------- footer --------------------------------
     .footer {
         max-width: 1366px;
         width: 100%;
@@ -216,6 +225,12 @@ body {
             width: 30%;
             height: 100%;
             @include d-flex (flex, space-evenly, center);
+            @media (max-width: 768px) {
+                width: 40%;
+            }
+            @media (max-width: 480px) {
+                width: 50%;
+            }
             .fa-facebook-f,
             .fa-phone-volume,
             .fa-google-plus-g {

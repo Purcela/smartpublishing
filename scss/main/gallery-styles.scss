@@ -3,7 +3,9 @@ body {
     .galery-s-1 {
         @extend %width;
         @include d-flex (flex, center, center);
-        flex-wrap: wrap;
+        flex-wrap: wrap;        
+        min-height: 800px;
+        height: 100%;
         margin: 100px;
         @media (max-width: 850px) {
             flex-direction: column;

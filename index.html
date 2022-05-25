@@ -22,8 +22,8 @@
         <title> Smart Publishing </title>
     </head>
 <body>
-    <div id="fb-root"></div><script async defer crossorigin="anonymous" src="https://connect.facebook.net/ka_GE/sdk.js#xfbml=1&version=v13.0" nonce="M2AUQscQ"></script>
-    </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ka_GE/sdk.js#xfbml=1&version=v13.0" nonce="M2AUQscQ"></script>
     <header class="header-wraper">
         <nav class="header-nav">
             <div class="header-nav-box">              
@@ -50,48 +50,47 @@
         </nav>
     </header>
     <section class="index-s-1">
-        <div class="tableCell">
-            <div class="code-title"> შეიყვანეთ ვიდეოს QR კოდი </div>
-            <form class="random-generator" id="form" role="search" >
-                <input type="search" id="query" name="q" placeholder="">
-                <button onclick="getVideoFr();">
-                    <!-- <img src="img/kk.png"> -->
+        <div class="tableCell" >
+            <h2 class="code-title"> შეიყვანეთ ვიდეოს QR კოდი </h2>
+            <form class="random-generator" id="newsearch" method="get"  >
+                <input type="text" id="searchvalue" class="textbox1" >
+                <button type="submit" value="">
                     <i class="fa-regular fa-hand-pointer"></i>
                 </button>
+                <input type="hidden" id="hiddenvalue1" name="." value="mp4">
             </form>
             <p class="generator-title"> მაგ: V11 </p>
         </div>
-        <div class="video-box">    
+
             <video id="myVideo" controls autoplay>
                 <source src="videos/V11.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>            
-        </div>
+            </video>  
     </section>
     <section class="index-s-2"> 
         <div class="slideshow-container">
             <div class="mySlides fade" style="display: block;">
                 <a href="galery.html">
-                    <img src="img/smart-start.jpg">
-                    <p class="slideshow-title"> ჭკვიანი სტარტი - Smart Start </p>
+                    <img src="img/smart-start.jpg" alt="smart start">
+                    <h6 class="slideshow-title"> ჭკვიანი სტარტი - Smart Start </h6>
                 </a>
             </div>          
             <div class="mySlides fade">
                 <a href="galery.html">
-                    <img src="img/smart-stories.jpg">
-                    <p class="slideshow-title"> ჭკვიანი ისტორიები - Smart Stories </p>
+                    <img src="img/smart-stories.jpg" alt="smart stories">
+                    <h6 class="slideshow-title"> ჭკვიანი ისტორიები - Smart Stories </h6>
                 </a>
             </div>          
             <div class="mySlides fade">
                 <a href="galery.html">
-                    <img src="img/smart-grammar.png">
-                    <p class="slideshow-title"> ინგლისური გრამატიკის ჭკვიანი წიგნი - English Grammar Smart Book </p>
+                    <img src="img/smart-grammar.png" alt="smart grammar">
+                    <h6 class="slideshow-title"> ინგლისური გრამატიკის ჭკვიანი წიგნი - English Grammar Smart Book </h6>
                 </a>
             </div>
             <div class="mySlides fade">
                 <a href="galery.html">
-                    <img src="img/smart-grammar1.png">
-                    <p class="slideshow-title"> ინგლისური გრამატიკის ჭკვიანი წიგნი - English Grammar Smart Book </p>
+                    <img src="img/smart-grammar1.png" alt="smart grammar1">
+                    <h6 class="slideshow-title"> ინგლისური გრამატიკის ჭკვიანი წიგნი - English Grammar Smart Book </h6>
                 </a>
             </div>          
         </div>

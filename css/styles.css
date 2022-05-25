@@ -203,11 +203,16 @@ body .header-wraper .header-nav .menu-ul .active-li {
   }
 }
 body .index-s-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   margin-top: 100px;
+  min-height: 250px;
+  height: 100%;
 }
 body .index-s-1 .tableCell {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   padding: 0 20px;
   display: flex;
   justify-content: center;
@@ -216,7 +221,7 @@ body .index-s-1 .tableCell {
 }
 @media (max-width: 768px) {
   body .index-s-1 .tableCell {
-    margin-top: 200px;
+    margin-top: 130px;
   }
 }
 body .index-s-1 .tableCell .code-title {
@@ -236,18 +241,25 @@ body .index-s-1 .tableCell .random-generator {
   align-items: center;
   max-width: 350px;
   width: 100%;
-}
-body .index-s-1 .tableCell .random-generator input {
   width: 100%;
   height: 50px;
-  padding: 0 20px;
   font-family: "BPG Glaho Bold";
   font-size: 25px;
   border: 3px solid gray;
   border-radius: 30px;
 }
+body .index-s-1 .tableCell .random-generator input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 25px;
+  font-family: "BPG Nuskha Modern";
+  border-radius: 30px;
+  background-image: url(../img/header-back.png);
+}
 body .index-s-1 .tableCell .random-generator button {
   border: none;
+  border-radius: 30px;
 }
 body .index-s-1 .tableCell .random-generator button .fa-hand-pointer {
   font-size: 40px;
@@ -260,12 +272,7 @@ body .index-s-1 .tableCell .generator-title {
   font-family: "BPG Glaho Bold";
   font-size: 20px;
 }
-body .index-s-1 .video-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .index-s-1 .video-box video {
+body .index-s-1 video {
   max-width: 600px;
   width: 100%;
   max-height: 340px;
@@ -276,7 +283,7 @@ body .index-s-2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 body .mySlides {
   display: none;
@@ -319,7 +326,7 @@ body .dot {
   cursor: pointer;
 }
 body .active {
-  background-color: #717171;
+  background-color: #1877f2;
 }
 body .fade {
   -webkit-animation-name: fade;
@@ -359,6 +366,16 @@ body .footer .footer-social {
   justify-content: space-evenly;
   align-items: center;
 }
+@media (max-width: 768px) {
+  body .footer .footer-social {
+    width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  body .footer .footer-social {
+    width: 50%;
+  }
+}
 body .footer .footer-social .fa-facebook-f,
 body .footer .footer-social .fa-phone-volume,
 body .footer .footer-social .fa-google-plus-g {
@@ -385,6 +402,8 @@ body .galery-s-1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  min-height: 800px;
+  height: 100%;
   margin: 100px;
 }
 @media (max-width: 850px) {
@@ -471,7 +490,9 @@ body .galery-s-1 .galery-box .galery-price-box .galery-pay {
 }
 
 body .about-s-1 {
-  height: 950px;
+  min-height: 850px;
+  height: 100%;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -487,24 +508,11 @@ body .about-s-1 .about-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 130px;
   padding: 20px 10px;
   border-radius: 30px;
   background-color: rgba(173, 216, 230, 0.6392156863);
 }
-body .about-s-1 .about-box h1 {
-  font-family: "BPG Glaho Bold";
-  color: black;
-  font-size: 40px;
-  margin-bottom: 30px;
-  letter-spacing: 5px;
-}
-@media (max-width: 480px) {
-  body .about-s-1 .about-box h1 {
-    font-size: 25px;
-  }
-}
-body .about-s-1 .about-box p {
+body .about-s-1 .about-box h3 {
   font-family: "BPG Algeti Compact";
   font-size: 20px;
   word-spacing: 5px;
@@ -512,7 +520,7 @@ body .about-s-1 .about-box p {
   line-height: 30px;
 }
 @media (max-width: 480px) {
-  body .about-s-1 .about-box p {
+  body .about-s-1 .about-box h3 {
     font-size: 18px;
   }
 }
@@ -524,9 +532,9 @@ body .about-s-1 .about-box p {
 }
 
 body .contact-s-1 {
-  height: 600px;
+  min-height: 800px;
+  height: 100%;
   margin-top: 100px;
-  background-image: url(../img/header-back.png);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -603,10 +611,15 @@ body .contact-s-1 .qr-box {
 }
 body .contact-s-1 .qr-box h3 {
   width: 200px;
-  font-family: "BPG Glaho Bold";
-  font-size: 18px;
+  font-family: "Henny Penny Regular";
+  font-size: 25px;
   text-align: center;
-  line-height: 25px;
+  line-height: 40px;
+}
+@media (max-width: 490px) {
+  body .contact-s-1 .qr-box h3 {
+    font-size: 20px;
+  }
 }
 body .contact-s-1 .qr-box .app-box {
   display: flex;
