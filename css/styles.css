@@ -203,7 +203,7 @@ body .header-wraper .header-nav .menu-ul .active-li {
   }
 }
 body .index-s-1 {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 body .index-s-1 .tableCell {
   margin-top: 100px;
@@ -248,7 +248,11 @@ body .index-s-1 .tableCell .random-generator input {
 }
 body .index-s-1 .tableCell .random-generator button {
   border: none;
-  background-color: white;
+}
+body .index-s-1 .tableCell .random-generator button .fa-hand-pointer {
+  font-size: 40px;
+  color: rgba(85, 82, 40, 0.8588235294);
+  cursor: pointer;
 }
 body .index-s-1 .tableCell .generator-title {
   margin-top: 10px;
@@ -286,7 +290,7 @@ body img {
 body .slideshow-title {
   color: black;
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -419,7 +423,7 @@ body .galery-s-1 .galery-box {
 body .galery-s-1 .galery-box img {
   width: 192px;
   height: 282px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 body .galery-s-1 .galery-box .galery-books {
   display: flex;
@@ -450,8 +454,8 @@ body .galery-s-1 .galery-box .galery-price-box {
 }
 body .galery-s-1 .galery-box .galery-price-box .galery-price {
   font-family: "BPG Nuskha Modern";
-  font-size: 22px;
-  color: #3DD6C4;
+  font-size: 25px;
+  color: #4080ff;
   text-align: center;
   margin-bottom: 10px;
 }

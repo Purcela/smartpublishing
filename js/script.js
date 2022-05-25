@@ -7,7 +7,7 @@ $("#burger-menu").on("click", function(){
 var slideIndex = 0;
 var slideIndexCurrent = 0;
 showSlides();
-//showSlidesCurrent(slideIndexCurrent);
+// showSlidesCurrent(slideIndexCurrent);
 
 function currentSlide(n) {
   showSlidesCurrent(slideIndexCurrent = n);
@@ -49,7 +49,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every x seconds
+  setTimeout(showSlides, 3000); // Change image every x seconds
 }
 
 //   ----------------------------------------------- facebook -----------------------------------------------------------

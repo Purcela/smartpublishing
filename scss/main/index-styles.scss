@@ -86,7 +86,7 @@ body {
     }
     .index-s-1 {
         @extend %width;
-        margin-top: 40px;
+        margin-top: 100px;
         .tableCell {
             margin-top: 100px;
             margin-bottom: 50px;
@@ -120,7 +120,12 @@ body {
                 }
                 button {
                     border: none;
-                    background-color: white;
+                    // background-color: white;
+                    .fa-hand-pointer {
+                        font-size: 40px;
+                        color: #555228db;
+                        cursor:pointer;
+                    }
                 }
             }
             .generator-title {
@@ -156,7 +161,7 @@ body {
     .slideshow-title {
         color: black;
         font-size: 20px;
-        padding: 5px;
+        padding: 10px;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -224,7 +229,6 @@ body {
                 color: #FFFFFF;
             }
             .fa-phone-volume {
-                // background-color: #55ACEE;
                 color: #FFFFFF;
             }
             .fa-google-plus-g {
