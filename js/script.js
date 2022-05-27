@@ -62,7 +62,7 @@ js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-//   ----------------------------------------------- search ideo -----------------------------------------------------------
+//   ----------------------------------------------- search video -----------------------------------------------------------
 
 
 document.getElementById("newsearch").addEventListener("submit", function(e) {
@@ -76,3 +76,6 @@ document.getElementById("newsearch").addEventListener("submit", function(e) {
   // the domain you could hardcode it in the function:
   window.location = "http://127.0.0.1:5500/" + searchText + "." + extension;
 });
+
+
+
