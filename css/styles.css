@@ -100,9 +100,6 @@ body .contact-s-1, body .about-s-1, body .galery-s-1, body .index-s-1, body .hea
 
 body {
   background-image: url(../img/header-back.png);
-  /* Slideshow container */
-  /* The dots/bullets/indicators */
-  /* Fading animation */
 }
 body .header-wraper {
   position: fixed;
@@ -257,15 +254,6 @@ body .index-s-1 .tableCell .random-generator input {
   border-radius: 30px;
   background-image: url(../img/header-back.png);
 }
-body .index-s-1 .tableCell .random-generator button {
-  border: none;
-  border-radius: 30px;
-}
-body .index-s-1 .tableCell .random-generator button .fa-hand-pointer {
-  font-size: 40px;
-  color: orange;
-  cursor: pointer;
-}
 body .index-s-1 .tableCell .generator-title {
   margin-top: 10px;
   margin-right: 50px;
@@ -273,6 +261,7 @@ body .index-s-1 .tableCell .generator-title {
   font-size: 20px;
 }
 body .index-s-1 video {
+  display: none;
   max-width: 600px;
   width: 100%;
   max-height: 340px;
@@ -283,18 +272,24 @@ body .index-s-2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px 0;
+  margin-top: 30px;
 }
-body .mySlides {
+body .index-s-2 .slideshow-container {
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+body .index-s-2 .slideshow-container .mySlides {
   display: none;
 }
-body img {
+body .index-s-2 .slideshow-container .mySlides a img {
   vertical-align: middle;
   width: 100%;
   max-height: 640px;
   height: auto;
 }
-body .slideshow-title {
+body .index-s-2 .slideshow-container .mySlides a .slideshow-title {
   color: black;
   font-size: 20px;
   padding: 10px;
@@ -305,30 +300,11 @@ body .slideshow-title {
   background-color: rgba(192, 192, 192, 0.768627451);
 }
 @media (max-width: 480px) {
-  body .slideshow-title {
+  body .index-s-2 .slideshow-container .mySlides a .slideshow-title {
     font-size: 16px;
   }
 }
-body .slideshow-container {
-  max-width: 1000px;
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
-body .dot {
-  height: 15px;
-  width: 55px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  cursor: pointer;
-}
-body .active {
-  background-color: #1877f2;
-}
-body .fade {
+body .index-s-2 .slideshow-container .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
@@ -349,6 +325,19 @@ body .fade {
   to {
     opacity: 1;
   }
+}
+body .index-s-2 .dot {
+  height: 15px;
+  width: 55px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+body .index-s-2 .active {
+  background-color: #1877f2;
 }
 body .footer {
   max-width: 1366px;

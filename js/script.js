@@ -64,18 +64,41 @@ fjs.parentNode.insertBefore(js, fjs);
 
 //   ----------------------------------------------- search video -----------------------------------------------------------
 
+let currentVideo = null; // Variable to keep track of the currently playing video
 
-document.getElementById("newsearch").addEventListener("submit", function(e) {
-  e.preventDefault();
+function searchVideo() {
+    // Get the input value and convert it to lowercase
+    const searchText = document.getElementById("searchInput").value.toLowerCase();
+    
+    // Get all video elements with the "video" class
+    const videos = document.querySelectorAll(".video");
 
-  var searchText = document.getElementById("searchvalue").value;
-  var extension = document.getElementById("hiddenvalue1").value;
+    // Pause and hide the currently playing video if it exists
+    if (currentVideo) {
+        currentVideo.pause();
+        currentVideo.style.display = "none";
+    }
 
-  // window.location = this.action + searchText + "." + extension;
-  // or if you don't want to use the form's action attribute to specify
-  // the domain you could hardcode it in the function:
-  window.location = "http://127.0.0.1:5500/" + searchText + "." + extension;
-});
+    // Loop through each video
+    videos.forEach((video) => {
+        // Get the video ID (which matches the video name)
+        const videoId = video.id.toLowerCase();
+
+        // Check if the entered text matches the video ID
+        if (videoId === searchText) {
+            // Show and autoplay the matching video
+            video.style.display = "block";
+            video.play();
+            currentVideo = video; // Set the currently playing video
+        }
+    });
+}
+
+
+
+
+
+
 
 
 
