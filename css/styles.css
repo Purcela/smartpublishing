@@ -93,7 +93,7 @@ body {
   padding-bottom: 30px;
 }
 
-body .contact-s-1, body .about-s-1, body .galery-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
+body .contact-s-1, body .about-s-1, body .gallery-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
   max-width: 1366px;
   width: 100%;
 }
@@ -386,7 +386,7 @@ body .footer .footer-social .fa-google-plus-g {
   color: #FFFFFF;
 }
 
-body .galery-s-1 {
+body .gallery-s-1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,16 +396,16 @@ body .galery-s-1 {
   margin: 100px;
 }
 @media (max-width: 850px) {
-  body .galery-s-1 {
+  body .gallery-s-1 {
     flex-direction: column;
   }
 }
 @media (max-width: 768px) {
-  body .galery-s-1 {
+  body .gallery-s-1 {
     margin-top: 170px;
   }
 }
-body .galery-s-1 .galery-box {
+body .gallery-s-1 .gallery-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -413,27 +413,27 @@ body .galery-s-1 .galery-box {
   margin-top: 100px;
 }
 @media (max-width: 850px) {
-  body .galery-s-1 .galery-box {
+  body .gallery-s-1 .gallery-box {
     width: 400px;
   }
 }
 @media (max-width: 768px) {
-  body .galery-s-1 .galery-box {
+  body .gallery-s-1 .gallery-box {
     margin-top: 50px;
   }
 }
 @media (max-width: 480px) {
-  body .galery-s-1 .galery-box {
+  body .gallery-s-1 .gallery-box {
     width: 100%;
     flex-direction: column;
   }
 }
-body .galery-s-1 .galery-box img {
+body .gallery-s-1 .gallery-box img {
   width: 192px;
   height: 282px;
   margin-right: 20px;
 }
-body .galery-s-1 .galery-box .galery-books {
+body .gallery-s-1 .gallery-box .gallery-books {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -442,13 +442,13 @@ body .galery-s-1 .galery-box .galery-books {
   min-height: 200px;
   height: 100%;
 }
-body .galery-s-1 .galery-box .galery-book-info {
+body .gallery-s-1 .gallery-box .gallery-books .gallery-book-info {
   width: 100%;
   font-family: "BPG Algeti Compact";
   font-size: 16px;
   line-height: 22px;
 }
-body .galery-s-1 .galery-box .galery-price-box {
+body .gallery-s-1 .gallery-box .gallery-books .gallery-price-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -456,18 +456,18 @@ body .galery-s-1 .galery-box .galery-price-box {
   margin-top: 20px;
 }
 @media (max-width: 480px) {
-  body .galery-s-1 .galery-box .galery-price-box {
+  body .gallery-s-1 .gallery-box .gallery-books .gallery-price-box {
     width: 100%;
   }
 }
-body .galery-s-1 .galery-box .galery-price-box .galery-price {
+body .gallery-s-1 .gallery-box .gallery-books .gallery-price-box .gallery-price {
   font-family: "BPG Nuskha Modern";
   font-size: 25px;
   color: #4080ff;
   text-align: center;
   margin-bottom: 10px;
 }
-body .galery-s-1 .galery-box .galery-price-box .galery-pay {
+body .gallery-s-1 .gallery-box .gallery-books .gallery-price-box .gallery-pay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,6 +476,7 @@ body .galery-s-1 .galery-box .galery-price-box .galery-pay {
   border: 2px solid gray;
   border-radius: 30px;
   background-color: rgba(238, 196, 24, 0.9882352941);
+  cursor: pointer;
 }
 
 body .about-s-1 {
@@ -538,11 +539,6 @@ body .contact-s-1 {
     height: 800px;
   }
 }
-@media (max-width: 480px) {
-  body .contact-s-1 {
-    height: 1200px;
-  }
-}
 body .contact-s-1 .contact-box {
   width: 260px;
   height: 200px;
@@ -550,6 +546,11 @@ body .contact-s-1 .contact-box {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+@media (max-width: 480px) {
+  body .contact-s-1 .contact-box {
+    margin-top: 100px;
+  }
 }
 body .contact-s-1 .contact-box h3 {
   font-family: "BPG Glaho Bold";
@@ -595,7 +596,7 @@ body .contact-s-1 .qr-box {
 @media (max-width: 480px) {
   body .contact-s-1 .qr-box {
     flex-direction: column;
-    height: 600px;
+    height: 400px;
   }
 }
 body .contact-s-1 .qr-box h3 {
@@ -620,8 +621,27 @@ body .contact-s-1 .qr-box .app-box .qr-img {
   width: 150px;
   height: 150px;
 }
+@media (max-width: 780px) {
+  body .contact-s-1 .qr-box .app-box .qr-img {
+    display: none;
+  }
+}
 body .contact-s-1 .qr-box .app-box .app-img {
   width: 150px;
   height: 50px;
   border-radius: 5%;
+}
+body .contact-s-1 .qr-box .app-box .app-play-store1 {
+  display: none;
+}
+@media (max-width: 780px) {
+  body .contact-s-1 .qr-box .app-box .app-play-store1 {
+    margin-bottom: 30px;
+    display: flex;
+  }
+}
+@media (max-width: 780px) {
+  body .contact-s-1 .qr-box .app-box .app-play-store {
+    display: none;
+  }
 }

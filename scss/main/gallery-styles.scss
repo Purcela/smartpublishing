@@ -1,6 +1,6 @@
 body {
     @extend %body;
-    .galery-s-1 {
+    .gallery-s-1 {
         @extend %width;
         @include d-flex (flex, center, center);
         flex-wrap: wrap;        
@@ -13,7 +13,7 @@ body {
         @media (max-width: 768px) {
             margin-top: 170px;
         }
-        .galery-box {
+        .gallery-box {
             @include d-flex (flex, center, center);
             width: 50%;
             margin-top: 100px;
@@ -32,41 +32,43 @@ body {
                 height: 282px;
                 margin-right: 20px
             }
-            .galery-books {
+            .gallery-books {
                 @include d-flex(flex, space-evenly, flex-start);
                 flex-direction: column;
                 width: 192px;
                 min-height: 200px;
                 height: 100%;
-            }
-            .galery-book-info {
-                width: 100%;
-                font-family: $ac-compact;
-                font-size: 16px;
-                line-height: 22px;
-            }
-            .galery-price-box {
-                @include d-flex (flex, center, center);
-                flex-direction: column;
-                margin-top: 20px;
-                @media (max-width: 480px) {
+                .gallery-book-info {
                     width: 100%;
+                    font-family: $ac-compact;
+                    font-size: 16px;
+                    line-height: 22px;
                 }
-                .galery-price {
-                    font-family: $nm-modern;
-                    font-size: 25px;
-                    color: #4080ff;
-                    text-align: center;
-                    margin-bottom: 10px
-                }
-                .galery-pay {
+                .gallery-price-box {
                     @include d-flex (flex, center, center);
-                    width: 120px;
-                    height: 30px;
-                    border: 2px solid gray;
-                    border-radius: 30px;
-                    background-color: #eec418fc;
-                }
+                    flex-direction: column;
+                    margin-top: 20px;
+                    @media (max-width: 480px) {
+                        width: 100%;
+                    }
+                    .gallery-price {
+                        font-family: $nm-modern;
+                        font-size: 25px;
+                        color: #4080ff;
+                        text-align: center;
+                        margin-bottom: 10px
+                    }
+                    .gallery-pay {
+                        @include d-flex (flex, center, center);
+                        width: 120px;
+                        height: 30px;
+                        border: 2px solid gray;
+                        border-radius: 30px;
+                        background-color: #eec418fc;
+                        cursor: pointer;
+                    }
+                    
+                }                
             }
         }
     }
