@@ -62,22 +62,6 @@ js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-//   ----------------------------------------------- facebook auto chat---------------------------------------------------
- 
-document.addEventListener("DOMContentLoaded", function() {
-  // Get a reference to the "შეძენა" button by its id
-  var purchaseButton = document.getElementById("purchase-button");
-
-  // Add a click event listener to the button
-  purchaseButton.addEventListener("click", function() {
-      // Define the Facebook chat link with a predefined message
-      var chatLink = "https://www.facebook.com/108426417209159/?message=I%20want%20to%20purchase%20a%20book.";
-
-      // Open the chat link in a new tab or window
-      window.open(chatLink, "_blank");
-  });
-});
-
 
 //   ----------------------------------------------- search video -----------------------------------------------------------
 
