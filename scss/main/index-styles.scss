@@ -5,6 +5,7 @@ body {
     .header-wraper{
         @extend %width;
         position: fixed;
+        top: 0;
         background-image: url(../img/header-back.png);
         @include d-flex (flex, space-between, center);
         .header-nav {
@@ -140,33 +141,34 @@ body {
             width: 100%;
             max-height: 340px;
             height: auto;
+            margin-bottom: 50px;
         }        
     }
 // ------------------------------ slideshow -----------------------------
     .index-s-2 {
-        @include d-flex (flex, center, center);
-        flex-direction: column;
-        margin-top: 30px;
-        .slideshow-container {
-            max-width: 1000px;
+        max-width: 880px;
+        width: 100%;
+        max-height: 650px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 0 55px 0;
+        .image-slideshow {
             width: 100%;
-            position: relative;
-            margin: auto;
-            .mySlides {
-                display: none;
-                a {
+            .fade {
+                width: 100%;
+                animation-name: fade;
+                animation-duration: 2s;
+                a {   
+                    display: flex;
+                    flex-direction: column;
                     img {
-                        vertical-align: middle;
-                        width: 100%;
-                        max-height: 640px;
-                        height: auto;
+                    width: 100%;
                     }
                     .slideshow-title {
                         color: black;
                         font-size: 20px;
                         padding: 10px;
-                        position: absolute;
-                        bottom: 0;
                         width: 100%;
                         text-align: center;
                         background-color: #c0c0c0c4;
@@ -176,40 +178,41 @@ body {
                     }
                 }
             }
-            .fade {
-                -webkit-animation-name: fade;
-                -webkit-animation-duration: 1.5s;
-                animation-name: fade;
-                animation-duration: 1.5s;
-            }
-            @-webkit-keyframes fade {
-                from {opacity: .4} 
-                to {opacity: 1}
-            }
             @keyframes fade {
-                from {opacity: .4} 
+                from {opacity: .4}
                 to {opacity: 1}
             }
-        }        
-        .dot {
-            height: 15px;
-            width: 55px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-            cursor:pointer;
+        }
+        .slideshow-dots {
+            width: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            button {
+                width: 10px;
+                height: 50px;
+                margin: 5px 0;
+                border-radius: 30px;
+                @media (max-width:640px) {
+                    height: 40px;
+                }
+                @media (max-width:460px) {
+                    height: 30px;
+                }
             }
-            .active {
-            background-color: #1877f2;
+            button:active {
+                background-color: #3B5998;
             }
+        }
+          
     }
+
 // ------------------------------- footer --------------------------------
     .footer {
-        max-width: 1366px;
         width: 100%;
         height: 50px;
+        position: fixed;
+        bottom: 0;
         @include d-flex (flex, space-around, center);
         background-image: url(../img/header-back2.png);
         .footer-social {
@@ -241,7 +244,6 @@ body {
                 color: #FFFFFF;
             }
         }
-
     }
 } 
 // ------------------------------- facebook -----------------------------

@@ -4,53 +4,43 @@ $("#burger-menu").on("click", function(){
 
   // ------------------------------------------------  slideshow -----------------------------------------------------------
 
-var slideIndex = 0;
-var slideIndexCurrent = 0;
-showSlides();
-// showSlidesCurrent(slideIndexCurrent);
+  let index = 0;
+const images = document.getElementsByClassName("image");
+let timer; // Declare timer variable
 
-function currentSlide(n) {
-  showSlidesCurrent(slideIndexCurrent = n);
-}
-/*** CURRENT SLIDE on click ***/
-function currentSlide(n) {
-  showSlidesCurrent(slideIndexCurrent = n);
-}
-function showSlidesCurrent(n) {
-  //var slideIndex = 1;
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndexCurrent = 1}
-  if (n < 0) {slideIndexCurrent = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+// Add event listeners to dot buttons
+const dotButtons = document.querySelectorAll(".slideshow-dots button");
+dotButtons.forEach((button, i) => {
+  button.addEventListener("click", () => {
+    index = i; // Set the index based on the clicked button
+    displayImages();
+  });
+});
+
+function displayImages() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+    dotButtons[i].style.backgroundColor = "transparent"; // Reset button colors
   }
-  slideIndex++;
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  if (index >= images.length) {
+    index = 0;
   }
-  slides[slideIndexCurrent-1].style.display = "block";  
-  dots[slideIndexCurrent-1].className += " active";
-  slideIndexCurrent++;
+
+  images[index].style.display = "block";
+  dotButtons[index].style.backgroundColor = "#3B5998"; // Set active button color
+
+  index++;
+
+  // Clear the previous timeout and set a new one
+  clearTimeout(timer);
+  timer = setTimeout(displayImages, 2500);
 }
-/*** SHOW SLIDE with timer ***/
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every x seconds
-}
+
+// Call displayImages() initially
+displayImages();
+
+  
 
 //   ----------------------------------------------- facebook -----------------------------------------------------------
  
@@ -63,7 +53,7 @@ fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
 
-//   ----------------------------------------------- search video -----------------------------------------------------------
+//   -------------------------------------------- search and play -----------------------------------------------------------
 
 let currentVideo = null; // Variable to keep track of the currently playing video
 

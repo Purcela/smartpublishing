@@ -90,11 +90,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0 5px;
-  padding-bottom: 30px;
 }
 
 body .contact-s-1, body .about-s-1, body .gallery-s-1, body .index-s-1, body .header-wraper .header-nav .header-nav-box, body .header-wraper .header-nav, body .header-wraper {
-  max-width: 1366px;
   width: 100%;
 }
 
@@ -103,6 +101,7 @@ body {
 }
 body .header-wraper {
   position: fixed;
+  top: 0;
   background-image: url(../img/header-back.png);
   display: flex;
   justify-content: space-between;
@@ -266,56 +265,43 @@ body .index-s-1 video {
   width: 100%;
   max-height: 340px;
   height: auto;
+  margin-bottom: 50px;
 }
 body .index-s-2 {
+  max-width: 880px;
+  width: 100%;
+  max-height: 650px;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin: 0 0 55px 0;
+}
+body .index-s-2 .image-slideshow {
+  width: 100%;
+}
+body .index-s-2 .image-slideshow .fade {
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+body .index-s-2 .image-slideshow .fade a {
+  display: flex;
   flex-direction: column;
-  margin-top: 30px;
 }
-body .index-s-2 .slideshow-container {
-  max-width: 1000px;
+body .index-s-2 .image-slideshow .fade a img {
   width: 100%;
-  position: relative;
-  margin: auto;
 }
-body .index-s-2 .slideshow-container .mySlides {
-  display: none;
-}
-body .index-s-2 .slideshow-container .mySlides a img {
-  vertical-align: middle;
-  width: 100%;
-  max-height: 640px;
-  height: auto;
-}
-body .index-s-2 .slideshow-container .mySlides a .slideshow-title {
+body .index-s-2 .image-slideshow .fade a .slideshow-title {
   color: black;
   font-size: 20px;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   text-align: center;
   background-color: rgba(192, 192, 192, 0.768627451);
 }
 @media (max-width: 480px) {
-  body .index-s-2 .slideshow-container .mySlides a .slideshow-title {
+  body .index-s-2 .image-slideshow .fade a .slideshow-title {
     font-size: 16px;
-  }
-}
-body .index-s-2 .slideshow-container .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes fade {
@@ -326,23 +312,36 @@ body .index-s-2 .slideshow-container .fade {
     opacity: 1;
   }
 }
-body .index-s-2 .dot {
-  height: 15px;
-  width: 55px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  cursor: pointer;
+body .index-s-2 .slideshow-dots {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
-body .index-s-2 .active {
-  background-color: #1877f2;
+body .index-s-2 .slideshow-dots button {
+  width: 10px;
+  height: 50px;
+  margin: 5px 0;
+  border-radius: 30px;
+}
+@media (max-width: 640px) {
+  body .index-s-2 .slideshow-dots button {
+    height: 40px;
+  }
+}
+@media (max-width: 460px) {
+  body .index-s-2 .slideshow-dots button {
+    height: 30px;
+  }
+}
+body .index-s-2 .slideshow-dots button:active {
+  background-color: #3B5998;
 }
 body .footer {
-  max-width: 1366px;
   width: 100%;
   height: 50px;
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -447,6 +446,7 @@ body .gallery-s-1 .gallery-box .gallery-books .gallery-book-info {
   font-family: "BPG Algeti Compact";
   font-size: 16px;
   line-height: 22px;
+  background-color: white;
 }
 body .gallery-s-1 .gallery-box .gallery-books .gallery-price-box {
   display: flex;
@@ -480,20 +480,19 @@ body .gallery-s-1 .gallery-box .gallery-books .gallery-price-box .gallery-pay {
 }
 
 body .about-s-1 {
-  min-height: 850px;
-  height: 100%;
+  height: 85vh;
   margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 10px;
   background-image: url(../img/info-book.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 body .about-s-1 .about-box {
-  max-width: 650px;
+  max-width: 700px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -511,7 +510,7 @@ body .about-s-1 .about-box h3 {
 }
 @media (max-width: 480px) {
   body .about-s-1 .about-box h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
